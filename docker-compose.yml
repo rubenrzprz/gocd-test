@@ -2,6 +2,7 @@ version: "3.5"
 services:
     tomcat:
         build: ./dockerfiles/tomcat
+        user: "go:go"
         ports:
             - 2121:8080
         volumes:
