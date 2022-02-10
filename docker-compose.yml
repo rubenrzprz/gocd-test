@@ -1,12 +1,8 @@
 version: "3.5"
 services:
-    www:
-        build: ./dockerfiles/www
-        ports:
-            - 8021:80
     tomcat:
         build: ./dockerfiles/tomcat
         ports:
-            - 8022:8080
+            - 2121:8080
         volumes:
             - ./deployments:/usr/local/tomcat/webapps/
