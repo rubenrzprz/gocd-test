@@ -1,0 +1,14 @@
+version: "3.5"
+services:
+    www:
+        build: ./dockerfiles/www
+        ports:
+            - 8021:80
+    tomcat:
+        image: tomcat:9.0
+        ports:
+            - 8022:8080
+        volumes:
+            - ./deployments:/usr/local/tomcat/webapps/
+        command:
+            - "catailna.sh run"
